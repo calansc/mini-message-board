@@ -1,8 +1,24 @@
 <html>
     <head>
-        <title>Mini Message Board</title>
+        <title><%= title %></title>
     </head>
     <body>
-        Message Board Body
+        <h1>Message Board Body</h1>
+        <% for (let i=0; i < messages.length; i++) { %>
+            <li>
+                <a href="<%= messages[i].href %>">
+                    <span> <%= messages[i].text %> </span>
+                </a>
+            </li>
+       <% } %>
+       <ul>
+        <% messages.forEach((message) => { %>
+            <li>
+                <div>User: <%= message.user %> </div>
+                <div> <%= message.text %> </div>
+                <div> Date Added: <%= message.added %> </div>
+            </li>
+        <% }) %>
+       </ul>
     </body>
 </html>
