@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title><%= title %></title>
+    </head>
+    <body>
+        <h1>Message Details:</h1>
+        <div>User: <%= messages[messageId].user %></div>
+        <div>Message: <%= messages[messageId].text %></div>
+        <div>Date Added: <%= messages[messageId].added %></div>
+        <br>
+        <form action="/">
+            <input type="submit" value="Back to Message Board">
+        </form>
+    </body>
+</html>

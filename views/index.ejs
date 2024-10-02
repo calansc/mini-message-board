@@ -4,19 +4,24 @@
     </head>
     <body>
         <h1>Message Board Body</h1>
-        <% for (let i=0; i < messages.length; i++) { %>
+        <!-- <% for (let i=0; i < messages.length; i++) { %>
             <li>
                 <a href="<%= messages[i].href %>">
                     <span> <%= messages[i].text %> </span>
                 </a>
             </li>
-       <% } %>
+       <% } %> -->
        <ul>
+        <% let count=-1 %>
         <% messages.forEach((message) => { %>
             <li>
                 <div>User: <%= message.user %> </div>
                 <div> <%= message.text %> </div>
                 <div> Date Added: <%= message.added %> </div>
+                <% count++ %>
+                <form action="/message/<%= count %>">
+                    <input type="submit" value="Open">
+                </form>
             </li>
         <% }) %>
        </ul>
