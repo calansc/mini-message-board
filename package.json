@@ -1,0 +1,12 @@
+{
+  "name": "mini-message-board",
+  "version": "1.0.0",
+  "description": "Mini Message Board Project on The Odin Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Chad Schroeder",
+  "license": "ISC"
+}
