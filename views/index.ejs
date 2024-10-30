@@ -4,22 +4,13 @@
     </head>
     <body>
         <h1>Message Board Body</h1>
-        <!-- <% for (let i=0; i < messages.length; i++) { %>
-            <li>
-                <a href="<%= messages[i].href %>">
-                    <span> <%= messages[i].text %> </span>
-                </a>
-            </li>
-       <% } %> -->
        <ul>
-        <% let count=-1 %>
-        <% messages.forEach((message) => { %>
+        <% messages.map((message) => { %>
             <li>
-                <div>User: <%= message.user %> </div>
-                <div> <%= message.text %> </div>
-                <div> Date Added: <%= message.added %> </div>
-                <% count++ %>
-                <form action="/message/<%= count %>">
+                <div>User: <%= message.messageuser %> </div>
+                <div> <%= message.messagetext %> </div>
+                <div> Date Added: <%= message.date %> </div>
+                <form action="/message/<%= message.id %>">
                     <input type="submit" value="Open">
                 </form>
             </li>

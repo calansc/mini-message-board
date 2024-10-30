@@ -4,9 +4,9 @@
     </head>
     <body>
         <h1>Message Details:</h1>
-        <div>User: <%= messages[messageId].user %></div>
-        <div>Message: <%= messages[messageId].text %></div>
-        <div>Date Added: <%= messages[messageId].added %></div>
+        <div>User: <%= message.messageuser %></div>
+        <div>Message: <%= message.messagetext %></div>
+        <div>Date Added: <%= message.date %></div>
         <br>
         <form action="/">
             <input type="submit" value="Back to Message Board">
