@@ -2,8 +2,9 @@ const db = require("../db/queries");
 // const asyncHandler = require("express-async-handler");
 
 async function getMessages(req, res) {
+  console.log("Controller getMessages...");
   const rows = await db.getAllMessages();
-  //   console.log("Controller Messages", rows);
+  console.log("Controller getMessages", rows);
   res.render("index", { title: "Mini Message Board", messages: rows });
 }
 async function newMessageGet(req, res) {
